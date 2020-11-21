@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration02.html</title>
+
+    <style>
+
+        fieldset{
+            background-color: #F9F9F9; border: 1px solid gray;
+            width: 50em; height: 95em;
+        }
+
+        #a{
+            background-color: white; border-top: 2px solid black;
+            border-left: 1px solid gray; border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+            width: 50em; height: 70em;
+            border-spacing: 1em; 
+        }
+        
+        #b{
+            background-color: white; border-top: 2px solid black;
+            border-left: 1px solid gray; border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+            border-spacing: 1em; width: 50em;
+            padding-top: 1em;
+        }
+
+        td{
+            padding-left: 1em;  
+            content: '*' color red;
+        }
+
+        td > button{
+            background-color: #343434;
+            color: white; size: 3pt; text-align: center; padding:3pt;
+            margin: 3px; 
+        }
+
+        .es{
+            text-align: right; color: gray; font-size: small;
+        }
+        .gender >button{
+            background-color: white; color: black; border: 1px solid gray; 
+            padding: 6px; width: 35px; outline: 0;
+        }
+        .gender > button:active{
+            background-color: #274069; color: white; border: 1px solid gray;
+        }
+        .gender > button:hover{
+            background-color: #274069; color: white; border: 1px solid gray;
+        }
+
+        .subject {
+            text-align: right; font-weight: bold;
+        }
+
+        .subject:first-letter{
+            color: red;
+        }
+
+        .main{
+            text-align: right; font-weight: bold;
+        }
+
+        #pic{
+            width: 32px; height: 32px; vertical-align: bottom; padding-right: 20pt;
+        }
+
+        #check{
+            border-spacing: 5em; text-align: left;
+        }
+        input{
+
+            padding: 5pt; size: 50pt;
+        }
+
+        #ip{
+            padding: 5pt;
+        }
+
+        #sign{
+           background-color: #274069; padding: 8pt; width: 15em; color: white;
+        }
+
+        #view{
+            color: rgb(80, 78, 78); font-size: x-small;
+        }
+    </style>
+
+</head>
+<body>
+   
+    <fieldset>
+        <div class="es">*필수입력사항</div>
+      
+        <table id="a">
+            <tr>
+                
+            </tr>
+            <tr>
+                <td class="subject" >*&shy아이디</td>
+                <td style="color: gray; font-size: small;"><input id="in" type="text" name="user_id">
+                    <button type="button">중복확인</button>
+                    <br>※ 3~15자의 영문과 숫자만 가능합니다.              
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="subject">*&shy비밀번호</td>
+                <td style="color: gray; font-size: small;"><input id="in"type="text" name="user_pwd" size="30">
+                    <br>※ 영문/숫자/특수문자 조합 6~20자 이상 입력해주세요.(아이디/전화번호사용불가)
+                    <br>※ 1234**비밀번호는 홈페이지 사용에 제한됩니다.
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="subject" size="30">*&shy비밀번호 확인</td>
+                <td><input type="text" name="user_pwd1" id="in"></td>
+            </tr>
+    
+            <tr>
+                <td class="subject" size="30">*&shy이름</td>
+                <td class="gender"><input type="text" name="user_name" id="in">
+                    <button type="button">여</button>
+                    <button type="button">남</button></td>
+            </tr>
+    
+            <tr>
+                <td class="subject">*&shy생년월일</td>
+                <td><input type="text" name="birth" id="in">
+                <a href="" ><img src="../images/date1.jpg" alt="date" id="pic"></a></td>
+            </tr>
+    
+            <tr>
+                <td class="subject">*&shy주소</td>
+                <td><input type="text" name="address" size="20" id="in">
+                    <button type="menu">우편번호찾기</button>
+                    <br><br>
+                    <input type="text" name="add" size="30" id="in"> <input type="text" name="add" id="in">
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="subject">*&shy이메일</td>
+                <td><input type="text" name="email" id="in">@<input type="text" name="e_address" id="in">
+                    <select name="email_address" id="ip">
+                    <option value="self" >직접입력</option> 
+                    <option value="google">google.com</option> 
+                    <option value="daum">daum.net</option> 
+                    <option value="naver">naver.com</option> 
+                    <option value="nate">nate.com</option> 
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="subject">*&shy휴대폰번호</td>
+                <td>
+                    <select name="phone_number" id="ip">
+                    <option value="zero">010</option>
+                    <option value="one">011</option>
+                    <option value="seven">017</option>
+                    </select>
+                    - <input type="text" name="m_number" maxlength="4" id="in">
+                    - <input type="text" name="p_number" maxlength="4" id="in">
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="main">전화번호</td>
+                <td>
+                    <select name="house_number" id="ip">
+                    <option value="internet">070</option>
+                    <option value="seoul">02</option>
+                    <option value="three">031</option>
+                    <option value="two">032</option>
+                    <option value="five">051</option>
+                    </select>
+                    - <input type="text" name="m_number" maxlength="4" id="in">
+                    - <input type="text" name="p_number" maxlength="4" id="in">
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="main">출판계약일</td>
+                <td><input type="text" name="startDate" id="in">
+                    <a href="" ><img src="../images/date1.jpg" alt="date" id="pic"></a>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="main">출판종료일</td>
+                <td><input type="text" name="endDate"id="in">
+                    <a href="" ><img src="../images/date1.jpg" alt="date" id="pic"></a>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="main">선택정보</td>
+                <td><input type="checkbox" name="sel" value="java">자바출판
+                    <input type="checkbox" name="sel" value="helf">반기획출판
+                    <input type="checkbox" name="sel" value="pri">프리미엄출판
+                    <input type="checkbox" name="sel" value="consult">출판컨설팅
+                    <br>
+                    <input type="checkbox" name="sel" value="pub">기획출판
+                    <input type="checkbox" name="sel" value="yet">미정
+                </td>
+            </tr> 
+         
+        </table>
+
+
+        <tr>
+            <br>
+            <td colspan="2" style="font-weight: bold; color: gray;">이용약관 동의* 
+            <span style="font-size: small; color: gray;">선택항목에 동의하지않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>  
+            </td>
+        </tr>
+
+        <table id="b">
+
+    
+          
+
+            
+            <tr>
+                <td>
+                    <br>
+                    <th colspan="2" id="check"><input  type="checkbox" name="right" value="All">
+                        전체동의
+                        </th>
+                </td>
+            </tr>
+    
+            <tr>
+                <td></td>
+                <td colspan="2" style="text-align: left;">
+                    <input type="checkbox" name="" value="">이용약관<span style="color: gray;">(필수)</span>
+                    &nbsp;&nbsp;<a href="" id="view">약관보기></a>
+                    <br><br>
+                    <input type="checkbox" name="" value="">개인정보처리방침<span style="color: gray;">(필수)</span>
+                    &nbsp;&nbsp;<a href="" id="view">약관보기></a>
+                    <br><br>
+                    <input type="checkbox" name="" value="">이벤트 및 혜택 알림 수신<span style="color: gray;">(선택)</span>
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="" id="">SMS
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="" id="">이메일
+    
+                </td>
+            </tr>
+
+        </table>
+        <br><br>
+        <tr>
+            <td colspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" id="sign">가입 하기</button>
+            </td>
+      
+        </tr>
+    
+</fieldset>
+
+</body>
+</html>
